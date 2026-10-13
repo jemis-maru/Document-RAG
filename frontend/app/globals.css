@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+
+/* Light palette. Surfaces step from a cool off-white page to white cards;
+   one indigo accent; semantic colours deep enough to read on white.
+   Use as bg-surface, text-dim, border-line, etc. */
+@theme {
+  --color-bg: #f5f6fb;
+  --color-surface: #ffffff;
+  --color-surface-2: #f8f9fc;
+  --color-surface-3: #eef0f7;
+  --color-line: #e4e7f0;
+  --color-line-strong: #cfd4e2;
+  --color-ink: #141a2e;
+  --color-dim: #4a5370;
+  --color-mute: #7b84a0;
+  --color-accent: #5b5bd6;
+  --color-accent-hover: #4a48c4;
+  --color-accent-soft: #eeeeff;
+  --color-ok: #15803d;
+  --color-warn: #b45309;
+  --color-danger: #be123c;
+  --color-table: #0f766e;
+  --color-visual: #a21caf;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Inter, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+
+  --shadow-card: 0 1px 2px rgb(20 26 46 / 0.04), 0 8px 24px -12px rgb(20 26 46 / 0.12);
+  --shadow-lift: 0 2px 4px rgb(20 26 46 / 0.05), 0 16px 40px -16px rgb(91 91 214 / 0.35);
+}
+
+html {
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-bg font-sans text-ink antialiased;
+  font-size: 15px;
+  line-height: 1.6;
+  /* Two soft glows so the page is not a flat grey sheet. */
+  background-image:
+    radial-gradient(48rem 28rem at 0% -10%, rgb(91 91 214 / 0.1), transparent 70%),
+    radial-gradient(40rem 26rem at 100% 0%, rgb(20 184 166 / 0.08), transparent 70%);
+  background-attachment: fixed;
+}
